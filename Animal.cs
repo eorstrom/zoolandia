@@ -20,3 +20,38 @@ class Lizard : Animal {
         speed = speed + (0.2 * legs);
     }
 }
+
+class Animal {
+    public string AnimalName { get; set; }    
+}
+class Species : Animal {
+    public string SpeciesName { get; set; }    
+}
+class Lion : Species {
+    public string Noise { get; set; }
+    public bool Exotic { get; set; }
+    public int FiercenessLevel {get; set;}
+}
+class Tiger : Species {
+    public string Noise { get; set; }
+    public bool Exotic { get; set; }
+    public int FiercenessLevel {get; set;}
+}
+class Bear : Species {
+    public string Noise { get; set; }
+    public bool Exotic { get; set; }
+    public int FiercenessLevel {get; set;}
+}
+class Cheetah : Species {
+    public string Noise { get; set; }
+    public bool Exotic { get; set; }
+    public int FiercenessLevel {get; set;}
+}
+Lion alex = new Lion();
+alex.SpeciesName = "Panthera Leo";
+alex.Noise = "roar";
+alex.FiercenessLevel = 9;
+alex.Exotic = false;
+Console.WriteLine ("I have a Lion named Alex who makes a noise that sounds like {0}. I would 
+rate his fierceness as a {1}.", alex.Noise, alex.FiercenessLevel);
+I have a Lion named Alex who makes a noise that sounds like roar. I would rate his fierceness as a 9.
