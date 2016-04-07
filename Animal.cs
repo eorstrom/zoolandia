@@ -1,52 +1,158 @@
-class Animal {
-    // Simple properties
-    public double speed { get; set; }
-    public string species { get; set; }
-    public int legs { get; set; }
-    // Public method that can be redefined by derived classes
-    public virtual void walk () {
-        Console.WriteLine("Animal class walk method");
-        speed = speed + (0.1 * legs);
-    }
-}
-
-class Lizard : Animal {
-    // Adding additional properties to what is inherited from Animal
-    public string scaleColor { get; set; }
-    public bool camouflage { get; set; }
-    // Redefining the base class implementation
-    public override void walk () {
-        Console.WriteLine("Lizard class walk method");
-        speed = speed + (0.2 * legs);
-    }
-}
-
-class Animal {
+//          ZOOLANDIA - ZOO ANIMALS etc.
+          
+// ANIMAL CLASS
+class Animal 
+{
     public string AnimalName { get; set; }    
 }
-class Species : Animal {
+
+
+// GENUS : URSUS (BEARS)
+class Ursus : Animal
+{
+    public string GenusName { get; set; }
+}
+
+// SPECIES
+class Ursus Maritimus : Ursus 
+{
     public string SpeciesName { get; set; }    
 }
-class Lion : Species {
+class Ailuropoda melanoleuca : Ursus 
+{
+    public string SpeciesName { get; set; }    
+}
+class Ursus thibetanus : Ursus 
+{
+    public string SpeciesName { get; set; }    
+}
+class Ursus Arctos : Ursus 
+{
+    public string SpeciesName { get; set; }    
+}
+
+
+
+// GENUS : PANTHERA (BIG CATS)
+class Panthera : Animal
+{
+    public string GenusName { get; set; }
+}
+
+// SPECIES
+class Panthera tigris : Panthera 
+{
+    public string SpeciesName { get; set; }    
+}
+class Panthera leo : Panthera 
+{
+    public string SpeciesName { get; set; }    
+}
+class Panthera uncia : Panthera 
+{
+    public string SpeciesName { get; set; }    
+}
+class Panthera onca : Panthera 
+{
+    public string SpeciesName { get; set; }    
+}
+
+
+
+// GENUS: VULPES (FOXES)
+class Vulpes : Animal
+{
+    public string GenusName { get; set; }
+}
+
+// SPECIES
+class V. lagopus : Vulpes 
+{
+    public string SpeciesName { get; set; }    
+}
+class V. bengalensis : Vulpes 
+{
+    public string SpeciesName { get; set; }    
+}
+class V. zerda : Vulpes 
+{
+    public string SpeciesName { get; set; }    
+}
+class V. vulpes : Vulpes 
+{
+    public string SpeciesName { get; set; }    
+}
+class Panthera tigris : Vulpes 
+{
+    public string SpeciesName { get; set; }    
+}
+
+
+
+// GENUS: IGUANA (IGUANA)
+class Iguana : Animal
+{
+    public string GenusName { get; set; }
+}
+
+// SPECIES
+class I. iguana : Iguana 
+{
+    public string SpeciesName { get; set; }    
+}
+
+
+
+// GENUS: AFROGECKO (GECKO)
+class Afrogecko : Animal
+{
+    public string GenusName { get; set; }
+}
+
+// SPECIES
+class A. porphyreus : Afrogecko 
+{
+    public string SpeciesName { get; set; }    
+}
+
+
+
+// GENUS: PYTHON (PYTHON)
+class Python : Animal
+{
+    public string GenusName { get; set; }
+}
+
+// SPECIES
+class P. molurus : Python 
+{
+    public string SpeciesName { get; set; }    
+}
+
+
+
+
+class Lion : Species 
+{
     public string Noise { get; set; }
     public bool Exotic { get; set; }
     public int FiercenessLevel {get; set;}
 }
-class Tiger : Species {
+class Tiger : Species 
+{
     public string Noise { get; set; }
     public bool Exotic { get; set; }
     public int FiercenessLevel {get; set;}
 }
-class Bear : Species {
+class Bear : Species 
+{
     public string Noise { get; set; }
     public bool Exotic { get; set; }
     public int FiercenessLevel {get; set;}
 }
-class Cheetah : Species {
-    public string Noise { get; set; }
-    public bool Exotic { get; set; }
-    public int FiercenessLevel {get; set;}
-}
+class UrsusMaritimus : 
+
+
 Lion alex = new Lion();
 alex.SpeciesName = "Panthera Leo";
 alex.Noise = "roar";
